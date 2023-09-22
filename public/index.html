@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="”noindex”" content="”nofollow”" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css"
+      integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js"
+      integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+      integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=chillax@600,500,300,700,400,200&display=swap"
+      rel="stylesheet"
+    />
+    <title>Your Trading Desk</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      function initializeCarousel() {
+        $('#banner_slide').owlCarousel({
+          loop: true,
+          margin: 10,
+          nav: true,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            600: {
+              items: 1,
+            },
+            1000: {
+              items: 1,
+            },
+          },
+        });
+        $('#currency_slider').owlCarousel({
+          loop: true,
+          margin: 10,
+          nav: true,
+          onInitialized: counter,
+          onTranslated: counter,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            600: {
+              items: 3,
+            },
+            1000: {
+              items: 4.5,
+            },
+          },
+        });
+        $('.testimonial_slider').owlCarousel({
+          loop: true,
+          margin: 10,
+          nav: true,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            600: {
+              items: 3,
+            },
+            1000: {
+              items: 3,
+            },
+          },
+        });
+        $.fn.jQuerySimpleCounter = function (options) {
+          var settings = $.extend(
+            {
+              start: 0,
+              end: 100,
+              easing: 'swing',
+              duration: 400,
+              complete: '',
+            },
+            options
+          );
+
+          var thisElement = $(this);
+
+          $({ count: settings.start }).animate(
+            { count: settings.end },
+            {
+              duration: settings.duration,
+              easing: settings.easing,
+              step: function () {
+                var mathCount = Math.ceil(this.count);
+                thisElement.text(mathCount);
+              },
+              complete: settings.complete,
+            }
+          );
+        };
+        $('#number1').jQuerySimpleCounter({ end: 12, duration: 3000 });
+        $('#number2').jQuerySimpleCounter({ end: 55, duration: 3000 });
+        $('#number3').jQuerySimpleCounter({ end: 359, duration: 2000 });
+        /* AUTHOR LINK */
+        $('.about-me-img').hover(
+          function () {
+            $('.authorWindowWrapper')
+              .stop()
+              .fadeIn('fast')
+              .find('p')
+              .addClass('trans');
+          },
+          function () {
+            $('.authorWindowWrapper')
+              .stop()
+              .fadeOut('fast')
+              .find('p')
+              .removeClass('trans');
+          }
+        );
+        function counter(event) {
+          var element = event.target;
+          var items = event.item.count;
+          var item = event.item.index + 1;
+          var sldtxt = $('#currency_slider .active').html();
+          var sldWidth = 200;
+          var sldPercent = (sldWidth * item) / items;
+          $('#counter').html('0' + item + ' / 0' + items);
+          $('.slTxt').html(sldtxt);
+          $('.slideState span').css('width', sldPercent + '%');
+          $('.slideState span').html(sldPercent + '%');
+        }
+        $(document).on(
+          'click',
+          'header.mastheader div#navbarSupportedContent ul.navbar-nav li a',
+          function (e) {
+            $('.active').removeClass('active');
+            $(this).addClass('active');
+          }
+        );
+      }
+
+      $(document).ready(function () {
+        // console.log('now here');
+
+        initializeCarousel();
+      });
+
+      $('.home-link').on('click', function () {
+        console.log('here');
+
+        initializeCarousel();
+      });
+    </script>
+  </body>
+</html>
