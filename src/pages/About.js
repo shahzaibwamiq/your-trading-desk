@@ -2,25 +2,11 @@ import React from 'react';
 import Bestfeaturesec from '../components/Bestfeaturesec';
 import Bestplatformsec from '../components/Bestplatformsec';
 import Videosec from '../components/Videosec';
+import Breadcrumbs from '../components/Breadcrumbs';
 function About() {
   return (
     <>
-      <section className="breadcrumbs">
-        <div className="container">
-          <h1>About</h1>
-          <ul>
-            <li>
-              <a href="index">Home</a>
-            </li>
-            <li>
-              <i className="fas fa-caret-right"></i>
-            </li>
-            <li>
-              <span>About</span>
-            </li>
-          </ul>
-        </div>
-      </section>
+        <Breadcrumbs pageTitle="About Us"  /> 
       <Bestplatformsec/>
       <Bestfeaturesec/>
       <Videosec/>

@@ -7,7 +7,13 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Market from './pages/Market';
 import Contact from './pages/Contact';
 
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'jquery/dist/jquery.min.js'
+import 'bootstrap/dist/js/bootstrap.min.js'
+
 function App() {
+  console.log(window.location.pathname)
+
   return (
     <Router>
       <>

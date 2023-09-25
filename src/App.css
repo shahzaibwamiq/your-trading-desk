@@ -40,6 +40,9 @@ body a:hover {
   }
 }
 /*---------- HEADER -----------*/
+nav.navbar.bg-body-tertiary.navbar {
+  background: #0000 !important;
+}
 header.mastheader {
   padding: 30px 300px 30px 120px;
   position: absolute;
@@ -865,4 +868,10 @@ section.breadcrumbs ul li i {
   .CurrencySec .container-fluid {
     padding-left: 4%;
   }
+}
+@media screen and (max-width: 991px) {
+  button.navbar-toggler {
+    border: 1px solid #fff !important;
+    filter: contrast(0.5);
+}
 }

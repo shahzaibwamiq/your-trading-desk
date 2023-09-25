@@ -2,11 +2,13 @@ import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 function Contact() {
   return (
     <>
-    <section className="breadcrumbs">
+    <Breadcrumbs pageTitle="Contact"  /> 
+    {/* <section className="breadcrumbs">
            <Container>
 
             <h1>Contact</h1>
@@ -17,7 +19,7 @@ function Contact() {
             </ul>
             </Container>
 
-    </section>
+    </section> */}
     
     
     <section className="secContact">
