@@ -1,12 +1,15 @@
 import React from 'react';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 function Footer() {
   return (
     <>
       <footer id="theme-footer">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-3 col-md-3 col-sm-12">
+        <Container>
+          <Row>
+            <Col lg={3} md={3} sm={12}>
               <h3>Services</h3>
               <ul>
                 <li>
@@ -25,8 +28,8 @@ function Footer() {
                   <a href="#">Consultation</a>
                 </li>
               </ul>
-            </div>
-            <div className="col-lg-3 col-md-3 col-sm-12">
+            </Col>
+            <Col lg={3} md={3} sm={12} >
               <h3>Information</h3>
               <ul>
                 <li>
@@ -42,8 +45,8 @@ function Footer() {
                   <a href="#">Newsletter</a>
                 </li>
               </ul>
-            </div>
-            <div className="col-lg-3 col-md-3 col-sm-12">
+            </Col>
+            <Col lg={3} md={3} sm={12}>
               <h3>Platform</h3>
               <ul>
                 <li>
@@ -59,8 +62,8 @@ function Footer() {
                   <a href="#">Partnership</a>
                 </li>
               </ul>
-            </div>
-            <div className="col-lg-3 col-md-3 col-sm-12">
+            </Col>
+            <Col lg={3} md={3} sm={12}>
               <h3>About</h3>
               <p>
                 Stay connected with us and let's know more about Forex and more
@@ -88,9 +91,9 @@ function Footer() {
                   </a>
                 </li>
               </ul>
-            </div>
-          </div>
-        </div>
+            </Col>
+          </Row>
+        </Container>
       </footer>
     </>
   );
