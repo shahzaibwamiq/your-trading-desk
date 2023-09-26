@@ -2,6 +2,8 @@ import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Bestfeaturesingle from './Bestfeaturesingle';
+
 
 function Bestfeaturesec() {
   return (
@@ -25,47 +27,11 @@ function Bestfeaturesec() {
             </Row>
           </div>
           <Row>
-            <Col lg={4} md={4} sm={12} >
-              <div className="FeatureBox">
-                <div className="FeatureImg">
-                  <img src="assets/images/payment.png" />
-                </div>
-                <div className="FeatureCon">
-                  <h3>Easy Payment</h3>
-                  <p>
-                    Easier payments with many options to sell or buy in our
-                    transactions
-                  </p>
-                </div>
-              </div>
-            </Col>
-            <Col lg={4} md={4} sm={12}>
-              <div className="FeatureBox">
-                <div className="FeatureImg">
-                  <img src="assets/images/security.png" />
-                </div>
-                <div className="FeatureCon">
-                  <h3>High Security</h3>
-                  <p>
-                    Security system with high technology and encryption of every
-                  </p>
-                </div>
-              </div>
-            </Col>
-            <Col lg={4} md={4} sm={12}>
-              <div className="FeatureBox">
-                <div className="FeatureImg">
-                  <img src="assets/images/ecosystem.png" />
-                </div>
-                <div className="FeatureCon">
-                  <h3>Best Ecosystem</h3>
-                  <p>
-                    The services we provide with full support for the
-                    convenience of our
-                  </p>
-                </div>
-              </div>
-            </Col>
+            <Bestfeaturesingle title="Easy Payment" shortdesc="Easier payments with many options to sell or buy in our
+                    transactions" imgsrc="assets/images/security.png"/>
+           <Bestfeaturesingle title="High Security" shortdesc="Security system with high technology and encryption of every" imgsrc="assets/images/payment.png" />
+           <Bestfeaturesingle title="Best Ecosystem" shortdesc="The services we provide with full support for the
+                    convenience of our" imgsrc="assets/images/ecosystem.png"/>
           </Row>
         </Container>
       </section>
